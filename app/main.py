@@ -5,6 +5,11 @@ from flask import render_template
 from url_utils import get_base_url
 import os
 import torch
+import random
+import cv2
+
+random.seed(10)
+
 
 # setup the webserver
 # port may need to be changed if there are multiple flask servers running on same server
@@ -40,10 +45,6 @@ def about():
 def home():
     return render_template("index.html")
 
-# @app.route(f'{base_url}/try-it-out')
-# def predict():
-    
-
 @app.route(f'{base_url}/try-it-out', methods=['GET', 'POST'])
 def submit_file():
     if request.method == 'POST':
@@ -69,6 +70,61 @@ def submit_file():
     return render_template('try-it-out.html')
 
 
+@app.route(f'{base_url}/beta-video', methods=['GET', 'POST'])
+def submit_video_link():
+    if request.method == 'POST':
+        inp = request.form['link']
+        if 'https://you' and '.com' in inp:
+            url = inp[-1:-10]
+            return redirect(url_for('uploaded_video', file_url=url, org_url=inp))
+
+@app.route(f'{base_url}/video-results?filename=<file_url>')
+def uploaded_video(file_url, org_url):
+    here = os.getcwd()
+    cap = cv2.VideoCapture(file_url)
+    all_frames = []
+    idx = 0
+    while(cap.isOpened()):
+        ret, image = cap.read()
+        frame_path = os.path.join(here, app.config['UPLOAD_FOLDER'], file_url, str(idx)+'.jpg')
+        cv2.imwrite(frame_path, image)
+        idx+=1
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+    cap.release()
+    cv2.destroyAllWindows()
+    
+    main_pth =  os.path.join(here, app.config['UPLOAD_FOLDER'], file_url)
+    for frame_pth in os.listdir(main_pth):
+        results = model(frame_pth, size=416)
+        if len(results.pandas().xyxy) > 0:
+            results.print()
+            save_dir = os.path.join(here, app.config['UPLOAD_FOLDER'], file_url, 'annotated')
+            results.save(save_dir=save_dir)
+            confid = list(results.pandas().xyxy[0]['confidence'])
+            lab = list(results.pandas().xyxy[0]['name'])
+        else:
+            pass
+        
+        def write_video(file_path, frames, fps):
+            """
+            Writes frames to an mp4 video file
+            :param file_path: Path to output video, must end with .mp4
+            :param frames: List of PIL.Image objects
+            :param fps: Desired frame rate
+            """
+
+            w, h = frames[0].size
+            fourcc = cv.VideoWriter_fourcc('m', 'p', '4', 'v')
+            writer = cv.VideoWriter(file_path, fourcc, fps, (w, h))
+
+            for frame in frames:
+                writer.write(pil_to_cv(frame))
+
+            writer.release() 
+    
+    
 @app.route(f'{base_url}/prediction-results?filename=<filename>')
 def uploaded_file(filename):
     here = os.getcwd()
@@ -76,7 +132,7 @@ def uploaded_file(filename):
     results = model(image_path, size=416)
     if len(results.pandas().xyxy) > 0:
         results.print()
-        save_dir = os.path.join(here, app.config['UPLOAD_FOLDER'])
+        save_dir = os.path.join(here, app.config['UPLOAD_FOLDER'], "annotated")
         results.save(save_dir=save_dir)
         def and_syntax(alist):
             if len(alist) == 1:
@@ -97,7 +153,7 @@ def uploaded_file(filename):
         for percent in confidences:
             format_confidences.append(str(round(percent*100)) + '%')
         format_confidences = and_syntax(format_confidences)
-
+        
         labels = list(results.pandas().xyxy[0]['name'])
         # labels: sorting and capitalizing, putting into function
         labels = set(labels)

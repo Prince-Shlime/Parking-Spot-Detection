@@ -71,4 +71,68 @@ Traceback (most recent call last):
     s.bind(server_address)
 OSError: [Errno 98] Address already in use
 (cv_env) ]0;~/Parking-Spot-Detection/app[01;34m~/Parking-Spot-Detection/app[00m$ clear
-[H[J(cv_env) ]0;~/Parking-Spot-Detection/app[01;34m~/Parking-Spot-Detection/app[00m$ [K(cv_env) ]0;~/Parking-Spot-Detection/app[01;34m~/Parking-Spot-Detection/app[00m$ (base) ]0;~/Parking-Spot-Detection/app/templates[01;34m~/Parking-Spot-Detection/app/templates[00m$ [K(base) ]0;~/Parking-Spot-Detection/app/templates[01;34m~/Parking-Spot-Detection/app/templates[00m$ (base) ]0;~/Parking-Spot-Detection/app/templates[01;34m~/Parking-Spot-Detection/app/templates[00m$ 
+[H[J(cv_env) ]0;~/Parking-Spot-Detection/app[01;34m~/Parking-Spot-Detection/app[00m$ [K(cv_env) ]0;~/Parking-Spot-Detection/app[01;34m~/Parking-Spot-Detection/app[00m$ (base) ]0;~/Parking-Spot-Detection/app/templates[01;34m~/Parking-Spot-Detection/app/templates[00m$ [K(base) ]0;~/Parking-Spot-Detection/app/templates[01;34m~/Parking-Spot-Detection/app/templates[00m$ (base) ]0;~/Parking-Spot-Detection/app/templates[01;34m~/Parking-Spot-Detection/app/templates[00m$ (base) ]0;~/Parking-Spot-Detection/app/templates[01;34m~/Parking-Spot-Detection/app/templates[00m$ (base) ]0;~/Parking-Spot-Detection/app/templates[01;34m~/Parking-Spot-Detection/app/templates[00m$ 
+(base) ]0;~/Parking-Spot-Detection/app/templates[01;34m~/Parking-Spot-Detection/app/templates[00m$ [K(base) ]0;~/Parking-Spot-Detection/app/templates[01;34m~/Parking-Spot-Detection/app/templates[00m$ [K(base) ]0;~/Parking-Spot-Detection/app/templates[01;34m~/Parking-Spot-Detection/app/templates[00m$ python -m main
+/projects/07cb54a4-9729-4508-ad4f-95fc7891551c/miniconda3/bin/python: No module named main
+(base) ]0;~/Parking-Spot-Detection/app/templates[01;34m~/Parking-Spot-Detection/app/templates[00m$ python - main.my[K[Kpy
+Python 3.9.12 (main, Apr  5 2022, 06:56:58) 
+[GCC 7.5.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+KeyboardInterrupt
+>>> 
+KeyboardInterrupt
+>>> q()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'q' is not defined
+>>> c
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'c' is not defined
+>>> q
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'q' is not defined
+>>> exit()
+(base) ]0;~/Parking-Spot-Detection/app/templates[01;34m~/Parking-Spot-Detection/app/templates[00m$ clea[K[K[K[Kcd ..
+(base) ]0;~/Parking-Spot-Detection/app[01;34m~/Parking-Spot-Detection/app[00m$ python -m main.[K
+Traceback (most recent call last):
+  File "/projects/07cb54a4-9729-4508-ad4f-95fc7891551c/miniconda3/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/projects/07cb54a4-9729-4508-ad4f-95fc7891551c/miniconda3/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/projects/07cb54a4-9729-4508-ad4f-95fc7891551c/Parking-Spot-Detection/app/main.py", line 7, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+(base) ]0;~/Parking-Spot-Detection/app[01;34m~/Parking-Spot-Detection/app[00m$ conda activate cv_env
+(cv_env) ]0;~/Parking-Spot-Detection/app[01;34m~/Parking-Spot-Detection/app[00m$ conda activate cv_env[7Ppython -m main
+Downloading: "https://github.com/ultralytics/yolov5/archive/master.zip" to /projects/07cb54a4-9729-4508-ad4f-95fc7891551c/.cache/torch/hub/master.zip
+YOLOv5 🚀 2022-7-15 Python-3.8.13 torch-1.8.1+cu102 CPU
+
+Fusing layers... 
+Model summary: 213 layers, 7015519 parameters, 0 gradients
+Adding AutoShape... 
+Try to open
+
+    https://cocalc18.ai-camp.dev//07cb54a4-9729-4508-ad4f-95fc7891551c/port/12345/
+
+
+ * Serving Flask app "main" (lazy loading)
+ * Environment: production
+[31m   WARNING: This is a development server. Do not use it in a production deployment.[0m
+[2m   Use a production WSGI server instead.[0m
+ * Debug mode: on
+Traceback (most recent call last):
+  File "/projects/07cb54a4-9729-4508-ad4f-95fc7891551c/miniconda3/envs/cv_env/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/projects/07cb54a4-9729-4508-ad4f-95fc7891551c/miniconda3/envs/cv_env/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/projects/07cb54a4-9729-4508-ad4f-95fc7891551c/Parking-Spot-Detection/app/main.py", line 128, in <module>
+    app.run(host = '0.0.0.0', port=port, debug=True)
+  File "/projects/07cb54a4-9729-4508-ad4f-95fc7891551c/miniconda3/envs/cv_env/lib/python3.8/site-packages/flask/app.py", line 990, in run
+    run_simple(host, port, self, **options)
+  File "/projects/07cb54a4-9729-4508-ad4f-95fc7891551c/miniconda3/envs/cv_env/lib/python3.8/site-packages/werkzeug/serving.py", line 1030, in run_simple
+    s.bind(server_address)
+OSError: [Errno 98] Address already in use
+(cv_env) ]0;~/Parking-Spot-Detection/app[01;34m~/Parking-Spot-Detection/app[00m$ [K(cv_env) ]0;~/Parking-Spot-Detection/app[01;34m~/Parking-Spot-Detection/app[00m$ 

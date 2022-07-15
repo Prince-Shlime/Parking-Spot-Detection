@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Logis Bootstrap Template - Get a Quote</title>
+  <title>Try It Out</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -43,7 +43,7 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="{{ url_for('home') }}" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="static/img/logo.png" alt="">
         <h1>AI Camp</h1>
@@ -71,8 +71,8 @@
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
-              <h2>Try it Out</h2>
-              <p>Watch a livestream of real parking lots or upload your own picture to check for parking spots</p>
+              <h2>Try It Out</h2>
+              <p>Upload your own picture to check for parking spots<br>or see the results on a video!</p>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@
       <nav>
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
             <li>Try It Out</li>
           </ol>
         </div>
@@ -93,10 +93,12 @@
 
         <div class="row g-0">
 
-          <div class="col-lg-5 quote-bg" style="background-image: url(static/img/quote-bg.jpg);"></div>
+          <div class="col-lg-5 quote-bg" style="background-color: white;">
+            <iframe width='400' height='300' src="https://www.youtube.com/embed/qlDKuMFrqzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
 
           <div class="col-lg-7">
-            <form name="file" enctype="multipart/form-data" id="image-submit-form" method="post" class="php-email-form text-center" >
+            <form name="file" enctype="multipart/form-data" id="image-submit-form" method="post" class="php-email-form text-center">
 
               <div class="row gy-4">
                 <h3>Upload your own photo</h3>
@@ -130,30 +132,23 @@
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
-          <a href="index.html" class="logo d-flex align-items-center">
+          <a href="{{ url_for('home') }}" class="logo d-flex align-items-center">
             <span>Parking Spot Detection</span>
           </a>
-          <div class="social-links d-flex mt-4" style="padding-top: 20px;">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          </div>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
+          <h4>Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
+          <h4>Services</h4>
           <ul>
-            <li><a href="index.html">Services</a></li>
-            <li><a href="about.html">Terms of service</a></li>
+            <li><a href="{{ url_for('submit_file') }}">Try It Out</a></li>
           </ul>
         </div>
 
@@ -161,9 +156,6 @@
     </div>
 
     <div class="container mt-4">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Logis</span></strong>. All Rights Reserved
-      </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
@@ -173,7 +165,7 @@
       </div>
     </div>
 
-  </footer><!-- End Footer -->
+  </footer>
   <!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

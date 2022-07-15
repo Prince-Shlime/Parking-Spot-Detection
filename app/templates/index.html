@@ -39,10 +39,9 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
+  <header id="header" class="header d-flex align-items-center fixed-top" >
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="{{ url_for('home') }}" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="static/img/logo.png" alt="">
         <h1>AI Camp</h1>
@@ -79,8 +78,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <span>How It Works</span>
-          <h2>How It Works</h2>
+          <span>The Process</span>
+          <h2>The Process</h2>
 
         </div>
 
@@ -134,7 +133,7 @@
           <div class="col-lg-8 text-center">
             <h3>Try It For Yourself</h3>
             <p> Look at live footage of real parking lots to see our program in action</p>
-            <a class="cta-btn" href="try-it-out.html">Let's Go!</a>
+            <a class="cta-btn" href="{{ url_for('submit_file') }}">Let's Go!</a>
             </div>
           </div>
 
@@ -147,26 +146,30 @@
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
-          <a href="index.html" class="logo d-flex align-items-center">
+          <a href="{{ url_for('home') }}" class="logo d-flex align-items-center">
             <span>Parking Spot Detection</span>
           </a>
         </div>
 
-        <div class="col-lg-4 col-6 footer-links">
-          <h4>Useful Links</h4>
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Links</h4>
           <ul>
-            <li><a href="index">Home</a></li>
-            <li><a href="about">About Us</a></li>
-            <li><a href="try-it-out">Try It Out</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
           </ul>
         </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="{{ url_for('submit_file') }}">Try It Out</a></li>
+          </ul>
+        </div>
+
       </div>
     </div>
 
     <div class="container mt-4">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Logis</span></strong>. All Rights Reserved
-      </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
@@ -176,7 +179,7 @@
       </div>
     </div>
 
-  </footer><!-- End Footer -->
+  </footer>
   <!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Logis Bootstrap Template - About</title>
+  <title>About</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -43,7 +43,7 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="{{ url_for('home') }}" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="static/images/logo.png" alt="">
         <h1>AI Camp</h1>
@@ -79,7 +79,7 @@
       <nav>
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
             <li>About</li>
           </ol>
         </div>
@@ -100,114 +100,72 @@
 
           <div class="col-lg-4 col-md-6 d-flex">
             <div class="member">
-              <img src="static/img/team/team-1.jpg" class="img-fluid" alt="">
+              <img src="https://lh3.googleusercontent.com/twAUEddB7I3DWWpbsyjipyr5nkMonw_QzmEnNTog--KRXbo4M-ONbVHTeq8cSQbExL3546_6gfTTPLQJWlyerSmIWHPekP65pP_9mqLVPZnvHesJnmPjT1b9628Gl0Fqc9aY09IviH8ihReNDd9-GoIxpz_ZY0hTjJ5u4vykuEQni7LJIAdiXcoUIDn2Nmy76lL-1OpfRD9RSWFDAYJPpT8C_5-FJIazmgorXIE40doGuePPMHKdWOY9HxCro0YpFVR2dvXO4aat-aQU3xQ86Gqewwo-SC19vNC5a-xFFJw9n21FLxprBNBpTtTZV3bKtb3IbI4fQkTB3lBjuXj35SpaxnvkizzibpQYfbKWZyJbcEU9yViWmCP5rPnvRCxismS0wPitjsLGlXCMoM_fYyRP1DlDiaLMXjcw5aiXGKG3JzlCcJnolr20j-A3x5CBcXgGVaZQpj8dfttGxzSM9oqt9ZeOxVZSJXiHoXHt4UY9yG0roE3bRb_0dm75zkNmZbbgGAPFQrsMW0gQGGL3RZaLVnou6wiRQIvcKR_RbbGIBmCRnte_B0XPCwzTw14H41HREiRSPmXcVuX3cLh-T3325LYHzVZ86s1hKcJ0i65yCRAsxY9P9CiNWwn0oLjhRJbeXI5QluHdJED1fqPBt9VqCmTJKBZ4othqdTY2M0buooH81bitYlPmqSNrUZ2PwRvJvbylmJNTlllBJM9fpQLbBu3CFxqkNKUvKLMC-Iy4eHYTZT2ZO0WyD_Qr4A=s965-no?authuser=0" class="img-fluid" alt="">
               <div class="member-content">
                 <h4>Arya Pradhan</h4>
-                <span>Web Development</span>
                 <p>
-                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                  Currently a junior at Ardrey Kell Highschool. Worked on data training and website development.
                 </p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
               </div>
             </div>
           </div><!-- End Team Member -->
 
           <div class="col-lg-4 col-md-6 d-flex">
             <div class="member">
-              <img src="static/img/team/team-2.jpg" class="img-fluid" alt="">
+              <img src="https://cdn.discordapp.com/attachments/990085274254078004/997521270239395940/me.jpg" class="img-fluid" alt="">
               <div class="member-content">
                 <h4>Akira Suzuki</h4>
-                <span>Marketing</span>
                 <p>
-                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                  An aspiring student entering the eleventh grade at Saint Augustine Catholic High School. Contributed to data collection and annotation, computer vision training, and some minor front end work.
                 </p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
               </div>
             </div>
           </div><!-- End Team Member -->
 
           <div class="col-lg-4 col-md-6 d-flex">
             <div class="member">
-              <img src="static/img/team/team-3.jpg" class="img-fluid" alt="">
+              <img src="https://cdn.discordapp.com/attachments/731223393357135962/997508914864197792/unknown.png" class="img-fluid" alt="">
               <div class="member-content">
                 <h4>Alex Loan</h4>
-                <span>Content</span>
                 <p>
-                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                  Attends Lane Technical High School in Chicago.<br>Hobbies include programming and video games.<br>In this project, helped with data collection, model training, and website development.
                 </p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
               </div>
             </div>
           </div><!-- End Team Member -->
 
           <div class="col-lg-4 col-md-6 d-flex">
             <div class="member">
-              <img src="static/img/team/team-1.jpg" class="img-fluid" alt="">
+              <img src="https://lh3.googleusercontent.com/a-/AFdZucpxDgoT2qUhR-4K5w-yB3ToVxepp38K43Y4RdBlUQ=s634-p-rw-no" class="img-fluid" alt="">
               <div class="member-content">
                 <h4>Dev Patel</h4>
-                <span>Web Development</span>
                 <p>
-                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                  Attending Turner Fenton Secondary School in Toronto. Worked on data processing and YOLO model training. 
                 </p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
               </div>
             </div>
           </div><!-- End Team Member -->
 
           <div class="col-lg-4 col-md-6 d-flex">
             <div class="member">
-              <img src="static/img/team/team-2.jpg" class="img-fluid" alt="">
+              <img src="https://cdn.discordapp.com/attachments/990085274254078004/997521771605536888/unknown.png" class="img-fluid" alt="">
               <div class="member-content">
                 <h4>Leo Tjong</h4>
-                <span>Marketing</span>
                 <p>
-                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                  Attending UCF in the fall, worked on a wide variety of everything including data collection and frontend.
                 </p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
               </div>
             </div>
           </div><!-- End Team Member -->
 
           <div class="col-lg-4 col-md-6 d-flex">
             <div class="member">
-              <img src="static/img/team/team-3.jpg" class="img-fluid" alt="">
+              <img src="https://lh3.googleusercontent.com/4kL9-O_aSIyWnwX90iImyMx8aTy9hTkkXXbuFc5X4PUjj8S4y3AVR0kxUfbu-8V_zuCFN_aLJASmSIMpzxvYY2SP2BERbtW7nByzpFYb3VdiziRRkWlC8NeXTAO2WUkMDx4GdUtijeVYZeMSUgnCHJzKHzrJsrahSlJ6w98GFBfC3oWqT_yo8mHNHc2StGXAru1zUU4hgfP-wfPUoCW6BuqbdKtfr9UTVoOAiXLKqrDAhMVyAcZJvUamuM0qcNrCDqyQlXALO2Gok1tvQInuVhlL8NUHHV6ZC3boUQF8doiAQA2m5tRFFyANpN3snFlFv2spsxbw6aX4T1o1VaBQAoX1-Q9AINfpg8aTyT2zVCUmbmh77j8iAJSfqo_ms3D2xGFOgczrj2olkPO_nFwwlOjMq8Ub5Gguwjlu--PgEKmyvyTgxwuo3fywtnBbOgTODihwEALb_9cB3reFWOJ_eGstErexoSfZSa_gdUBQyJY9Uj-SVJyzYDI1eer6ln9i1lQ2Mv8nLDfu_in2hrUlP14bQRjQ6H52ZtNYbkBocU7TFU6RQya1XgeusrbOFX2-HHZtBqVvzVTXQ2W3ruiWdYBdm6xqooZgouPn_tWWnT74btsd0WUN20SrjtkiyLp0zzObR-6v6g0YqNBfWNAUMdYqG3vJwklxO7bxCIgJajH_IbZUNcmsKmVKLD6Hh4rYGgrSyDmnkPRvBkAnLa41CW7vQyROCwJOkG_N6ibQre-hY7TfyEQNA2lt_t-QgFg=w1190-h893-no?authuser=0" class="img-fluid" alt="">
               <div class="member-content">
                 <h4>Prisha Sharma</h4>
-                <span>Content</span>
                 <p>
-                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                  A passionate rising sophmore at Eastlake High School. Worked on data collection, machine learning, and contributed to the front end.
                 </p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -218,30 +176,29 @@
     </section><!-- End Our Team Section -->
 
     
-   <!-- ======= Footer ======= -->
+  <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
-          <a href="index.html" class="logo d-flex align-items-center">
+          <a href="{{ url_for('home') }}" class="logo d-flex align-items-center">
             <span>Parking Spot Detection</span>
           </a>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
+          <h4>Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
+          <h4>Services</h4>
           <ul>
-            <li><a href="index.html">Services</a></li>
-            <li><a href="about.html">Terms of service</a></li>
+            <li><a href="{{ url_for('submit_file') }}">Try It Out</a></li>
           </ul>
         </div>
 
@@ -258,7 +215,7 @@
       </div>
     </div>
 
-  </footer><!-- End Footer -->
+  </footer>
   <!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
